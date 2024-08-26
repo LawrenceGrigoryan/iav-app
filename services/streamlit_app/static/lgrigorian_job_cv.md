@@ -1,5 +1,5 @@
 # Lavrentii Grigorian
-#### ML/DL Engineer  
+#### ML/DL Engineer
 Born on: 01/06/2000  
 Email: [glavrentiy123@gmail.com](mailto:glavrentiy123@gmail.com)  
 Mobile: +49 157 56537372  
