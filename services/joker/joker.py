@@ -47,7 +47,7 @@ def healthcheck() -> HealthCheck:
 
 
 @app.post("/generate_joke")
-def generate_joke(joker_request: JokerRequest) -> str:
+def generate_joke(joker_request: JokerRequest) -> dict:
     try:
         prompt = joker_request.prompt
         joke = app.state.model(prompt=prompt, generation_config=app.state.model_config.generation_config)
@@ -55,4 +55,4 @@ def generate_joke(joker_request: JokerRequest) -> str:
         logging.info(traceback.format_exc())
         joke = "Error occurred, try again"
         
-    return joke
+    return {"response": joke}
