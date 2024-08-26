@@ -1,5 +1,9 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="Curriculum Vitae",
+)
+
 with open("./static/lgrigorian_job_cv.md", "r") as file:
     cv_text_md = file.read()
 
