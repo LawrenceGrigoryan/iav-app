@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+
 import google.generativeai as genai
 from google.generativeai.types.generation_types import BlockedPromptException
 
