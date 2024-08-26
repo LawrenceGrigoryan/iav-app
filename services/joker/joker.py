@@ -5,7 +5,6 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI
-# from dotenv import load_dotenv
 from omegaconf import OmegaConf
 
 from utils.model import GeminiModel
@@ -17,9 +16,6 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefm
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # startup events
-    # load env variables
-    # env_path = Path(Path(__file__).resolve().parents[2], ".env")
-    # load_dotenv(env_path)
     GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
     
     # load model config
