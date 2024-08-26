@@ -4,11 +4,11 @@ import traceback
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from omegaconf import OmegaConf
 
 from utils.model import GeminiModel
-from utils.data_classes import JokerRequest
+from utils.data_classes import HealthCheck, JokerRequest
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%m/%d/%Y %I:%M:%S %p")
 
@@ -34,6 +34,16 @@ async def lifespan(app: FastAPI):
 
 # init app
 app = FastAPI(lifespan=lifespan)
+    
+    
+@app.get("/health",
+         tags=["healthcheck"],
+         summary="Perform a Health Check",
+         response_description="Return HTTP Status Code 200 (OK)",
+         status_code=status.HTTP_200_OK,
+         response_model=HealthCheck,)
+def healthcheck() -> HealthCheck:
+    return HealthCheck(status="OK")
 
 
 @app.post("/generate_joke")
