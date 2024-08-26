@@ -1,5 +1,5 @@
 model: gemini-1.5-flash
 generation_config:
-  temperature: 1.2
-  top_p: 0.8
-  response_mime_type: application/json
+  temperature: 1.5
+  top_p: 0.95
+  top_k: 64
