@@ -8,7 +8,7 @@ from fastapi import FastAPI
 from omegaconf import OmegaConf
 
 from utils.model import GeminiModel
-from utils.utils import JokerRequest
+from utils.data_classes import JokerRequest
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%m/%d/%Y %I:%M:%S %p")
 
