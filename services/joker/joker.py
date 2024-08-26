@@ -1,6 +1,7 @@
 import logging
 import os
 import traceback
+from pprint import pformat
 from contextlib import asynccontextmanager
 from pathlib import Path
 
@@ -25,6 +26,8 @@ async def lifespan(app: FastAPI):
     # init model and config once
     app.state.model = GeminiModel(GEMINI_API_KEY, model=model_config.model)
     app.state.model_config = model_config
+    
+    logging.info(f"model config:\n{pformat(dict(model_config))}")
 
     yield
     # shutdown
@@ -48,6 +51,7 @@ def healthcheck() -> HealthCheck:
 
 @app.post("/generate_joke")
 def generate_joke(joker_request: JokerRequest) -> dict:
+    logging.info(f"generating a joke, input:\n{pformat(joker_request.model_dump())}")
     try:
         prompt = joker_request.prompt
         joke = app.state.model(prompt=prompt, generation_config=app.state.model_config.generation_config)
