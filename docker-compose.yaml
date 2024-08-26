@@ -1,6 +1,12 @@
 services:
-  # streamlit-app:
-
+  streamlit-app:
+    restart: always
+    container_name: streamlit-app
+    build:
+      context: ./services/streamlit_app
+    command: streamlit run Main_Page.py --server.port=8006 --server.address=0.0.0.0
+    ports:
+      - 8888:8006
   joker:
     restart: always
     container_name: joker
