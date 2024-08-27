@@ -1,5 +1,7 @@
 # IAV Streamlit Project
 
+This repository contains a streamlit app that showcases my professional CV and a service for joke generation with Gemini LLM.
+
 # Structure
 ```
 iav-app
