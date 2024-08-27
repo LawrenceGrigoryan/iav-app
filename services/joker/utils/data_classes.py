@@ -7,3 +7,4 @@ class HealthCheck(BaseModel):
 
 class JokerRequest(BaseModel):
     prompt: str
+    generation_config: dict | None
