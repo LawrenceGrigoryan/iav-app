@@ -58,7 +58,6 @@ top_k = st.slider(
      value=128,
      on_change=upd_top_k)
 
-
 if st.button("Generate a joke"):
      # compile prompt
      joke_prompt = compile_prompt(context)
