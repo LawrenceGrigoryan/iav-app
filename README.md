@@ -14,18 +14,18 @@ iav-app
 │   │   ├── model_config.yaml  # default gemini config
 │   │   ├── requirements.txt  # list of dependencies for the joker
 │   │   └── joker.py  # LLM joker app entrypoint      
-│   ├── streamlit_app  # streamlit service
-│   │   ├── pages
-│   │   │   ├── Curriculum_Vitae.py  # CV page
-│   │   │   └── Joker.py  # joke generation page
-│   │   ├── utils
-│   │   │   └── prompting.py  # prompting utilities for joke │generation     
-│   │   └── static  # static objects for CV
-│   │        ├── lgrigorian_job_cv.md  # CV in markdown format
-│   │        └── lgrigorian_job_cv.pdf  # CV in pdf format
-│   ├── Dockerfile
-│   ├── requirements.txt  # dependencies for streamlit app               
-│   └── Main_Page.py  # entrypoint for streamlit UI
+│   └── streamlit_app  # streamlit service
+│       ├── pages
+│       │   ├── Curriculum_Vitae.py  # CV page
+│       │   └── Joker.py  # joke generation page
+│       ├── utils
+│       │   └── prompting.py  # prompting utilities for joke │generation     
+│       └── static  # static objects for CV
+│       │    ├── lgrigorian_job_cv.md  # CV in markdown format
+│       │    └── lgrigorian_job_cv.pdf  # CV in pdf format
+│       ├── Dockerfile
+│       ├── requirements.txt  # dependencies for streamlit app               
+│       └── Main_Page.py  # entrypoint for streamlit UI
 ├── .env  # ADD THIS! Must contain GEMINI_API_KEY
 ├── README.md  # repo description               
 ├── docker-compose.yaml
