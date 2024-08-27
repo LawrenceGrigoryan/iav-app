@@ -1,7 +1,6 @@
 import logging
 import os
 import traceback
-from copy import copy
 from pprint import pformat
 from contextlib import asynccontextmanager
 from pathlib import Path
