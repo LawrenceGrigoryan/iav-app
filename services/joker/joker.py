@@ -36,7 +36,10 @@ async def lifespan(app: FastAPI):
     
 
 # init app
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(
+    title="LLM Joke Generator",
+    lifespan=lifespan
+)
     
     
 @app.get("/health",
