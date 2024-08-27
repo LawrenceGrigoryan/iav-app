@@ -29,7 +29,7 @@ def upd_top_k():
 
 context = st.text_input(
      label="Context",
-     placeholder="(Optional) Add some context to make the generated joke even funnier"
+     placeholder="(Optional) Add some context to make the generated joke even funnier, e. g. 'About rabbits'"
 )
 
 temperature = st.slider(
