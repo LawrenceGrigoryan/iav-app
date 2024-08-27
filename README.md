@@ -5,7 +5,6 @@ This repository contains a streamlit app that showcases my professional CV and a
 # Structure
 ```
 iav-app
-├── notebooks  # jupyter notebooks for development
 ├── services  # dir with services
 │   ├── joker  # Joke generation service
 │   │   ├── utils
