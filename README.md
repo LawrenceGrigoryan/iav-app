@@ -53,3 +53,4 @@ Some references that I found interesting
 * [Talk Funny! A Large-Scale Humor Response Dataset with Chain-of-Humor
 Interpretation](https://ojs.aaai.org/index.php/AAAI/article/view/29736/31266)
 * [Prompts for writing jokes based on context](https://www.reddit.com/r/PromptEngineering/comments/178tryd/prompts_for_writing_jokes_based_on_context/)
+* [Witscript 3: A Hybrid AI System for Improvising Jokes in a Conversation](https://arxiv.org/pdf/2301.02695)
